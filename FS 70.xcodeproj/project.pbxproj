@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		F918E2822C6126F00026C18A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F918E2812C6126F00026C18A /* AppDelegate.swift */; };
 		F918E2842C6126F00026C18A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F918E2832C6126F00026C18A /* SceneDelegate.swift */; };
-		F918E2862C6126F00026C18A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F918E2852C6126F00026C18A /* ViewController.swift */; };
 		F918E2892C6126F00026C18A /* Base in Resources */ = {isa = PBXBuildFile; fileRef = F918E2882C6126F00026C18A /* Base */; };
 		F918E28C2C6126F00026C18A /* France_Services_70.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F918E28A2C6126F00026C18A /* France_Services_70.xcdatamodeld */; };
 		F918E28E2C6126F20026C18A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F918E28D2C6126F20026C18A /* Assets.xcassets */; };
@@ -17,13 +16,38 @@
 		F918E29C2C6126F20026C18A /* France_Services_70Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F918E29B2C6126F20026C18A /* France_Services_70Tests.swift */; };
 		F918E2A62C6126F20026C18A /* France_Services_70UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F918E2A52C6126F20026C18A /* France_Services_70UITests.swift */; };
 		F918E2A82C6126F20026C18A /* France_Services_70UITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F918E2A72C6126F20026C18A /* France_Services_70UITestsLaunchTests.swift */; };
-		F918E2BD2C62795D0026C18A /* TutorialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F918E2BC2C62795D0026C18A /* TutorialViewController.swift */; };
 		F92CB22F2C66147400733084 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F92CB22E2C66147400733084 /* Extensions.swift */; };
 		F92CB2312C66166B00733084 /* FSTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F92CB2302C66166B00733084 /* FSTabBarViewController.swift */; };
 		F92CB2332C6616E500733084 /* circle-question-regular48.png in Resources */ = {isa = PBXBuildFile; fileRef = F92CB2322C6616E500733084 /* circle-question-regular48.png */; };
 		F92CB2352C66660500733084 /* FSService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F92CB2342C66660500733084 /* FSService.swift */; };
 		F92CB2372C6666A700733084 /* FSManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F92CB2362C6666A700733084 /* FSManager.swift */; };
+		F95CC2E82C8B59BE0093DC4E /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = F95CC2E72C8B59BE0093DC4E /* CoreDataStack.swift */; };
+		F95CC2EE2C8B5F0D0093DC4E /* FSListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F95CC2ED2C8B5F0D0093DC4E /* FSListViewController.swift */; };
+		F95CC2F02C8B601C0093DC4E /* CustomFSTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F95CC2EF2C8B601C0093DC4E /* CustomFSTableViewCell.swift */; };
+		F95CC2F42C8B61930093DC4E /* FSMapController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F95CC2F32C8B61930093DC4E /* FSMapController.swift */; };
+		F95CC2F62C8B63420093DC4E /* FSPinAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F95CC2F52C8B63420093DC4E /* FSPinAnnotation.swift */; };
+		F96C5C9C2C996174004A2EDF /* FSDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F96C5C9B2C996174004A2EDF /* FSDetailViewController.swift */; };
+		F96C5C9E2C996E44004A2EDF /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F96C5C9D2C996E44004A2EDF /* InfoViewController.swift */; };
+		F972F8AF2C9C886500C2062F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F918E2872C6126F00026C18A /* Main.storyboard */; };
+		F972F8B32C9C8DC800C2062F /* CarouselCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F972F8B22C9C8DC800C2062F /* CarouselCell.swift */; };
+		F972F8B52C9C8E3A00C2062F /* CarouselView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F972F8B42C9C8E3A00C2062F /* CarouselView.swift */; };
+		F972F8B72C9C8EDF00C2062F /* FSCarouselViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F972F8B62C9C8EDF00C2062F /* FSCarouselViewController.swift */; };
+		F972F8CC2C9DD42F00C2062F /* car2.png in Resources */ = {isa = PBXBuildFile; fileRef = F972F8C72C9DD42F00C2062F /* car2.png */; };
+		F972F8CD2C9DD42F00C2062F /* car1.png in Resources */ = {isa = PBXBuildFile; fileRef = F972F8C62C9DD42F00C2062F /* car1.png */; };
+		F972F8CE2C9DD42F00C2062F /* car4.png in Resources */ = {isa = PBXBuildFile; fileRef = F972F8C92C9DD42F00C2062F /* car4.png */; };
+		F972F8CF2C9DD42F00C2062F /* car3.png in Resources */ = {isa = PBXBuildFile; fileRef = F972F8C82C9DD42F00C2062F /* car3.png */; };
+		F972F8D02C9DD42F00C2062F /* car6.png in Resources */ = {isa = PBXBuildFile; fileRef = F972F8CB2C9DD42F00C2062F /* car6.png */; };
+		F972F8D12C9DD42F00C2062F /* car5.png in Resources */ = {isa = PBXBuildFile; fileRef = F972F8CA2C9DD42F00C2062F /* car5.png */; };
 		F98AB16E2C7E1EEA00C4835B /* FSRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = F98AB16D2C7E1EEA00C4835B /* FSRepository.swift */; };
+		F98AB1702C7E1FDA00C4835B /* FSHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = F98AB16F2C7E1FDA00C4835B /* FSHelpers.swift */; };
+		F9EB0DD92CABE59F00CAC8B6 /* Horaire+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9EB0DD72CABE59F00CAC8B6 /* Horaire+CoreDataClass.swift */; };
+		F9EB0DDA2CABE59F00CAC8B6 /* Horaire+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9EB0DD82CABE59F00CAC8B6 /* Horaire+CoreDataProperties.swift */; };
+		F9EB0DE12CABF8FB00CAC8B6 /* Antenne+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9EB0DDF2CABF8FB00CAC8B6 /* Antenne+CoreDataClass.swift */; };
+		F9EB0DE22CABF8FB00CAC8B6 /* Antenne+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9EB0DE02CABF8FB00CAC8B6 /* Antenne+CoreDataProperties.swift */; };
+		F9EB0DE52CAC340100CAC8B6 /* Permanence+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9EB0DE32CAC340100CAC8B6 /* Permanence+CoreDataClass.swift */; };
+		F9EB0DE62CAC340100CAC8B6 /* Permanence+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9EB0DE42CAC340100CAC8B6 /* Permanence+CoreDataProperties.swift */; };
+		F9EB0DE92CAD42D300CAC8B6 /* Outil+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9EB0DE72CAD42D300CAC8B6 /* Outil+CoreDataClass.swift */; };
+		F9EB0DEA2CAD42D300CAC8B6 /* Outil+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9EB0DE82CAD42D300CAC8B6 /* Outil+CoreDataProperties.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,27 +68,50 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		F918E27E2C6126F00026C18A /* France Services 70.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "France Services 70.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F918E27E2C6126F00026C18A /* FS 70.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "FS 70.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F918E2812C6126F00026C18A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F918E2832C6126F00026C18A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		F918E2852C6126F00026C18A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		F918E2882C6126F00026C18A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F918E28B2C6126F00026C18A /* France_Services_70.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = France_Services_70.xcdatamodel; sourceTree = "<group>"; };
 		F918E28D2C6126F20026C18A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F918E2902C6126F20026C18A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F918E2922C6126F20026C18A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F918E2972C6126F20026C18A /* France Services 70Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "France Services 70Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F918E2972C6126F20026C18A /* FS 70Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "FS 70Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F918E29B2C6126F20026C18A /* France_Services_70Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = France_Services_70Tests.swift; sourceTree = "<group>"; };
-		F918E2A12C6126F20026C18A /* France Services 70UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "France Services 70UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F918E2A12C6126F20026C18A /* FS 70UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "FS 70UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F918E2A52C6126F20026C18A /* France_Services_70UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = France_Services_70UITests.swift; sourceTree = "<group>"; };
 		F918E2A72C6126F20026C18A /* France_Services_70UITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = France_Services_70UITestsLaunchTests.swift; sourceTree = "<group>"; };
-		F918E2BC2C62795D0026C18A /* TutorialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialViewController.swift; sourceTree = "<group>"; };
 		F92CB22E2C66147400733084 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		F92CB2302C66166B00733084 /* FSTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FSTabBarViewController.swift; sourceTree = "<group>"; };
 		F92CB2322C6616E500733084 /* circle-question-regular48.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "circle-question-regular48.png"; sourceTree = "<group>"; };
 		F92CB2342C66660500733084 /* FSService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FSService.swift; sourceTree = "<group>"; };
 		F92CB2362C6666A700733084 /* FSManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FSManager.swift; sourceTree = "<group>"; };
+		F95CC2E72C8B59BE0093DC4E /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
+		F95CC2ED2C8B5F0D0093DC4E /* FSListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FSListViewController.swift; sourceTree = "<group>"; };
+		F95CC2EF2C8B601C0093DC4E /* CustomFSTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomFSTableViewCell.swift; sourceTree = "<group>"; };
+		F95CC2F32C8B61930093DC4E /* FSMapController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FSMapController.swift; sourceTree = "<group>"; };
+		F95CC2F52C8B63420093DC4E /* FSPinAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FSPinAnnotation.swift; sourceTree = "<group>"; };
+		F96C5C9B2C996174004A2EDF /* FSDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FSDetailViewController.swift; sourceTree = "<group>"; };
+		F96C5C9D2C996E44004A2EDF /* InfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
+		F972F8B22C9C8DC800C2062F /* CarouselCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouselCell.swift; sourceTree = "<group>"; };
+		F972F8B42C9C8E3A00C2062F /* CarouselView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouselView.swift; sourceTree = "<group>"; };
+		F972F8B62C9C8EDF00C2062F /* FSCarouselViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FSCarouselViewController.swift; sourceTree = "<group>"; };
+		F972F8C62C9DD42F00C2062F /* car1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = car1.png; sourceTree = "<group>"; };
+		F972F8C72C9DD42F00C2062F /* car2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = car2.png; sourceTree = "<group>"; };
+		F972F8C82C9DD42F00C2062F /* car3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = car3.png; sourceTree = "<group>"; };
+		F972F8C92C9DD42F00C2062F /* car4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = car4.png; sourceTree = "<group>"; };
+		F972F8CA2C9DD42F00C2062F /* car5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = car5.png; sourceTree = "<group>"; };
+		F972F8CB2C9DD42F00C2062F /* car6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = car6.png; sourceTree = "<group>"; };
 		F98AB16D2C7E1EEA00C4835B /* FSRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FSRepository.swift; sourceTree = "<group>"; };
+		F98AB16F2C7E1FDA00C4835B /* FSHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FSHelpers.swift; sourceTree = "<group>"; };
+		F9EB0DD72CABE59F00CAC8B6 /* Horaire+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Horaire+CoreDataClass.swift"; sourceTree = "<group>"; };
+		F9EB0DD82CABE59F00CAC8B6 /* Horaire+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Horaire+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		F9EB0DDF2CABF8FB00CAC8B6 /* Antenne+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Antenne+CoreDataClass.swift"; sourceTree = "<group>"; };
+		F9EB0DE02CABF8FB00CAC8B6 /* Antenne+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Antenne+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		F9EB0DE32CAC340100CAC8B6 /* Permanence+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Permanence+CoreDataClass.swift"; sourceTree = "<group>"; };
+		F9EB0DE42CAC340100CAC8B6 /* Permanence+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Permanence+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		F9EB0DE72CAD42D300CAC8B6 /* Outil+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Outil+CoreDataClass.swift"; sourceTree = "<group>"; };
+		F9EB0DE82CAD42D300CAC8B6 /* Outil+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Outil+CoreDataProperties.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,9 +152,9 @@
 		F918E27F2C6126F00026C18A /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				F918E27E2C6126F00026C18A /* France Services 70.app */,
-				F918E2972C6126F20026C18A /* France Services 70Tests.xctest */,
-				F918E2A12C6126F20026C18A /* France Services 70UITests.xctest */,
+				F918E27E2C6126F00026C18A /* FS 70.app */,
+				F918E2972C6126F20026C18A /* FS 70Tests.xctest */,
+				F918E2A12C6126F20026C18A /* FS 70UITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -115,8 +162,8 @@
 		F918E2802C6126F00026C18A /* France Services 70 */ = {
 			isa = PBXGroup;
 			children = (
-				F92CB22D2C66143A00733084 /* Helpers */,
 				F918E2B92C6278B70026C18A /* Views */,
+				F92CB22D2C66143A00733084 /* Helpers */,
 				F918E2B82C6278B00026C18A /* assets */,
 				F918E2B72C6278AA0026C18A /* Models */,
 				F918E2B62C6278940026C18A /* Controllers */,
@@ -147,9 +194,12 @@
 		F918E2B62C6278940026C18A /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				F918E2852C6126F00026C18A /* ViewController.swift */,
-				F918E2BC2C62795D0026C18A /* TutorialViewController.swift */,
 				F92CB2302C66166B00733084 /* FSTabBarViewController.swift */,
+				F95CC2ED2C8B5F0D0093DC4E /* FSListViewController.swift */,
+				F95CC2F32C8B61930093DC4E /* FSMapController.swift */,
+				F96C5C9B2C996174004A2EDF /* FSDetailViewController.swift */,
+				F96C5C9D2C996E44004A2EDF /* InfoViewController.swift */,
+				F972F8B62C9C8EDF00C2062F /* FSCarouselViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -157,10 +207,19 @@
 		F918E2B72C6278AA0026C18A /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				F9EB0DDF2CABF8FB00CAC8B6 /* Antenne+CoreDataClass.swift */,
+				F9EB0DE02CABF8FB00CAC8B6 /* Antenne+CoreDataProperties.swift */,
+				F9EB0DD72CABE59F00CAC8B6 /* Horaire+CoreDataClass.swift */,
+				F9EB0DD82CABE59F00CAC8B6 /* Horaire+CoreDataProperties.swift */,
+				F9EB0DE32CAC340100CAC8B6 /* Permanence+CoreDataClass.swift */,
+				F9EB0DE42CAC340100CAC8B6 /* Permanence+CoreDataProperties.swift */,
+				F9EB0DE72CAD42D300CAC8B6 /* Outil+CoreDataClass.swift */,
+				F9EB0DE82CAD42D300CAC8B6 /* Outil+CoreDataProperties.swift */,
 				F918E28A2C6126F00026C18A /* France_Services_70.xcdatamodeld */,
 				F92CB2342C66660500733084 /* FSService.swift */,
 				F92CB2362C6666A700733084 /* FSManager.swift */,
 				F98AB16D2C7E1EEA00C4835B /* FSRepository.swift */,
+				F95CC2E72C8B59BE0093DC4E /* CoreDataStack.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -169,6 +228,12 @@
 			isa = PBXGroup;
 			children = (
 				F92CB2322C6616E500733084 /* circle-question-regular48.png */,
+				F972F8C62C9DD42F00C2062F /* car1.png */,
+				F972F8C72C9DD42F00C2062F /* car2.png */,
+				F972F8C82C9DD42F00C2062F /* car3.png */,
+				F972F8C92C9DD42F00C2062F /* car4.png */,
+				F972F8CA2C9DD42F00C2062F /* car5.png */,
+				F972F8CB2C9DD42F00C2062F /* car6.png */,
 				F918E28D2C6126F20026C18A /* Assets.xcassets */,
 			);
 			path = assets;
@@ -179,6 +244,10 @@
 			children = (
 				F918E28F2C6126F20026C18A /* LaunchScreen.storyboard */,
 				F918E2872C6126F00026C18A /* Main.storyboard */,
+				F95CC2EF2C8B601C0093DC4E /* CustomFSTableViewCell.swift */,
+				F95CC2F52C8B63420093DC4E /* FSPinAnnotation.swift */,
+				F972F8B22C9C8DC800C2062F /* CarouselCell.swift */,
+				F972F8B42C9C8E3A00C2062F /* CarouselView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -187,6 +256,7 @@
 			isa = PBXGroup;
 			children = (
 				F92CB22E2C66147400733084 /* Extensions.swift */,
+				F98AB16F2C7E1FDA00C4835B /* FSHelpers.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -194,9 +264,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		F918E27D2C6126F00026C18A /* France Services 70 */ = {
+		F918E27D2C6126F00026C18A /* FS 70 */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = F918E2AB2C6126F20026C18A /* Build configuration list for PBXNativeTarget "France Services 70" */;
+			buildConfigurationList = F918E2AB2C6126F20026C18A /* Build configuration list for PBXNativeTarget "FS 70" */;
 			buildPhases = (
 				F918E27A2C6126F00026C18A /* Sources */,
 				F918E27B2C6126F00026C18A /* Frameworks */,
@@ -206,14 +276,14 @@
 			);
 			dependencies = (
 			);
-			name = "France Services 70";
+			name = "FS 70";
 			productName = "France Services 70";
-			productReference = F918E27E2C6126F00026C18A /* France Services 70.app */;
+			productReference = F918E27E2C6126F00026C18A /* FS 70.app */;
 			productType = "com.apple.product-type.application";
 		};
-		F918E2962C6126F20026C18A /* France Services 70Tests */ = {
+		F918E2962C6126F20026C18A /* FS 70Tests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = F918E2AE2C6126F20026C18A /* Build configuration list for PBXNativeTarget "France Services 70Tests" */;
+			buildConfigurationList = F918E2AE2C6126F20026C18A /* Build configuration list for PBXNativeTarget "FS 70Tests" */;
 			buildPhases = (
 				F918E2932C6126F20026C18A /* Sources */,
 				F918E2942C6126F20026C18A /* Frameworks */,
@@ -224,14 +294,14 @@
 			dependencies = (
 				F918E2992C6126F20026C18A /* PBXTargetDependency */,
 			);
-			name = "France Services 70Tests";
+			name = "FS 70Tests";
 			productName = "France Services 70Tests";
-			productReference = F918E2972C6126F20026C18A /* France Services 70Tests.xctest */;
+			productReference = F918E2972C6126F20026C18A /* FS 70Tests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		F918E2A02C6126F20026C18A /* France Services 70UITests */ = {
+		F918E2A02C6126F20026C18A /* FS 70UITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = F918E2B12C6126F20026C18A /* Build configuration list for PBXNativeTarget "France Services 70UITests" */;
+			buildConfigurationList = F918E2B12C6126F20026C18A /* Build configuration list for PBXNativeTarget "FS 70UITests" */;
 			buildPhases = (
 				F918E29D2C6126F20026C18A /* Sources */,
 				F918E29E2C6126F20026C18A /* Frameworks */,
@@ -242,9 +312,9 @@
 			dependencies = (
 				F918E2A32C6126F20026C18A /* PBXTargetDependency */,
 			);
-			name = "France Services 70UITests";
+			name = "FS 70UITests";
 			productName = "France Services 70UITests";
-			productReference = F918E2A12C6126F20026C18A /* France Services 70UITests.xctest */;
+			productReference = F918E2A12C6126F20026C18A /* FS 70UITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -270,7 +340,7 @@
 					};
 				};
 			};
-			buildConfigurationList = F918E2792C6126F00026C18A /* Build configuration list for PBXProject "France Services 70" */;
+			buildConfigurationList = F918E2792C6126F00026C18A /* Build configuration list for PBXProject "FS 70" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -283,9 +353,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				F918E27D2C6126F00026C18A /* France Services 70 */,
-				F918E2962C6126F20026C18A /* France Services 70Tests */,
-				F918E2A02C6126F20026C18A /* France Services 70UITests */,
+				F918E27D2C6126F00026C18A /* FS 70 */,
+				F918E2962C6126F20026C18A /* FS 70Tests */,
+				F918E2A02C6126F20026C18A /* FS 70UITests */,
 			);
 		};
 /* End PBXProject section */
@@ -296,9 +366,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				F918E28E2C6126F20026C18A /* Assets.xcassets in Resources */,
+				F972F8AF2C9C886500C2062F /* Main.storyboard in Resources */,
 				F918E2912C6126F20026C18A /* Base in Resources */,
 				F92CB2332C6616E500733084 /* circle-question-regular48.png in Resources */,
 				F918E2892C6126F00026C18A /* Base in Resources */,
+				F972F8CC2C9DD42F00C2062F /* car2.png in Resources */,
+				F972F8CD2C9DD42F00C2062F /* car1.png in Resources */,
+				F972F8CE2C9DD42F00C2062F /* car4.png in Resources */,
+				F972F8CF2C9DD42F00C2062F /* car3.png in Resources */,
+				F972F8D02C9DD42F00C2062F /* car6.png in Resources */,
+				F972F8D12C9DD42F00C2062F /* car5.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -323,16 +400,33 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F918E2862C6126F00026C18A /* ViewController.swift in Sources */,
 				F92CB22F2C66147400733084 /* Extensions.swift in Sources */,
 				F98AB16E2C7E1EEA00C4835B /* FSRepository.swift in Sources */,
+				F95CC2F02C8B601C0093DC4E /* CustomFSTableViewCell.swift in Sources */,
 				F92CB2372C6666A700733084 /* FSManager.swift in Sources */,
 				F918E2822C6126F00026C18A /* AppDelegate.swift in Sources */,
-				F918E2BD2C62795D0026C18A /* TutorialViewController.swift in Sources */,
+				F95CC2F62C8B63420093DC4E /* FSPinAnnotation.swift in Sources */,
+				F95CC2E82C8B59BE0093DC4E /* CoreDataStack.swift in Sources */,
+				F96C5C9C2C996174004A2EDF /* FSDetailViewController.swift in Sources */,
+				F972F8B52C9C8E3A00C2062F /* CarouselView.swift in Sources */,
+				F972F8B72C9C8EDF00C2062F /* FSCarouselViewController.swift in Sources */,
+				F9EB0DE52CAC340100CAC8B6 /* Permanence+CoreDataClass.swift in Sources */,
+				F9EB0DE62CAC340100CAC8B6 /* Permanence+CoreDataProperties.swift in Sources */,
+				F95CC2EE2C8B5F0D0093DC4E /* FSListViewController.swift in Sources */,
+				F972F8B32C9C8DC800C2062F /* CarouselCell.swift in Sources */,
 				F92CB2352C66660500733084 /* FSService.swift in Sources */,
 				F918E2842C6126F00026C18A /* SceneDelegate.swift in Sources */,
 				F918E28C2C6126F00026C18A /* France_Services_70.xcdatamodeld in Sources */,
+				F95CC2F42C8B61930093DC4E /* FSMapController.swift in Sources */,
+				F9EB0DD92CABE59F00CAC8B6 /* Horaire+CoreDataClass.swift in Sources */,
+				F9EB0DE12CABF8FB00CAC8B6 /* Antenne+CoreDataClass.swift in Sources */,
+				F9EB0DE22CABF8FB00CAC8B6 /* Antenne+CoreDataProperties.swift in Sources */,
+				F9EB0DDA2CABE59F00CAC8B6 /* Horaire+CoreDataProperties.swift in Sources */,
+				F98AB1702C7E1FDA00C4835B /* FSHelpers.swift in Sources */,
 				F92CB2312C66166B00733084 /* FSTabBarViewController.swift in Sources */,
+				F9EB0DE92CAD42D300CAC8B6 /* Outil+CoreDataClass.swift in Sources */,
+				F9EB0DEA2CAD42D300CAC8B6 /* Outil+CoreDataProperties.swift in Sources */,
+				F96C5C9E2C996E44004A2EDF /* InfoViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -358,12 +452,12 @@
 /* Begin PBXTargetDependency section */
 		F918E2992C6126F20026C18A /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = F918E27D2C6126F00026C18A /* France Services 70 */;
+			target = F918E27D2C6126F00026C18A /* FS 70 */;
 			targetProxy = F918E2982C6126F20026C18A /* PBXContainerItemProxy */;
 		};
 		F918E2A32C6126F20026C18A /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = F918E27D2C6126F00026C18A /* France Services 70 */;
+			target = F918E27D2C6126F00026C18A /* FS 70 */;
 			targetProxy = F918E2A22C6126F20026C18A /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -579,7 +673,7 @@
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/France Services 70.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/France Services 70";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FS 70.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/FS 70";
 			};
 			name = Debug;
 		};
@@ -599,7 +693,7 @@
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/France Services 70.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/France Services 70";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FS 70.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/FS 70";
 			};
 			name = Release;
 		};
@@ -642,7 +736,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		F918E2792C6126F00026C18A /* Build configuration list for PBXProject "France Services 70" */ = {
+		F918E2792C6126F00026C18A /* Build configuration list for PBXProject "FS 70" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				F918E2A92C6126F20026C18A /* Debug */,
@@ -651,7 +745,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		F918E2AB2C6126F20026C18A /* Build configuration list for PBXNativeTarget "France Services 70" */ = {
+		F918E2AB2C6126F20026C18A /* Build configuration list for PBXNativeTarget "FS 70" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				F918E2AC2C6126F20026C18A /* Debug */,
@@ -660,7 +754,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		F918E2AE2C6126F20026C18A /* Build configuration list for PBXNativeTarget "France Services 70Tests" */ = {
+		F918E2AE2C6126F20026C18A /* Build configuration list for PBXNativeTarget "FS 70Tests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				F918E2AF2C6126F20026C18A /* Debug */,
@@ -669,7 +763,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		F918E2B12C6126F20026C18A /* Build configuration list for PBXNativeTarget "France Services 70UITests" */ = {
+		F918E2B12C6126F20026C18A /* Build configuration list for PBXNativeTarget "FS 70UITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				F918E2B22C6126F20026C18A /* Debug */,

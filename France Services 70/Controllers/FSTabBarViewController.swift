@@ -9,7 +9,7 @@ import UIKit
 
 class FSTabBarViewController: UITabBarController {
 
-    private let bioRepository = BioRepository()
+    private let fsRepository = FSRepository()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,8 +26,8 @@ class FSTabBarViewController: UITabBarController {
         
         navigationController?.navigationBar.standardAppearance.shadowColor = .clear
         navigationController?.navigationBar.standardAppearance.backgroundColor = UIColor(red: 2.35, green: 2.35, blue: 2.35, alpha: 1)
-        navigationController?.navigationBar.scrollEdgeAppearance!.shadowColor = .clear
-        navigationController?.navigationBar.scrollEdgeAppearance!.backgroundColor = UIColor(red: 2.35, green: 2.35, blue: 2.35, alpha: 1)
+        //navigationController?.navigationBar.scrollEdgeAppearance!.shadowColor = .clear
+        //navigationController?.navigationBar.scrollEdgeAppearance!.backgroundColor = UIColor(red: 2.35, green: 2.35, blue: 2.35, alpha: 1)
         
         UITabBar.appearance().clipsToBounds = true
         UITabBar.appearance().shadowImage = nil
@@ -37,38 +37,40 @@ class FSTabBarViewController: UITabBarController {
         self.viewControllers!.forEach { $0.view }
         
         //Load city if needee
-        loadCities()
+        loadFS()
         
-        NotificationCenter.default.addObserver(self, selector: #selector(self.receiveLocationName(_:)), name: NSNotification.Name(rawValue: "retrievelocationname"), object: nil)
+        
+        //TODO : need observer
+        //NotificationCenter.default.addObserver(self, selector: #selector(self.receiveLocationName(_:)), name: NSNotification.Name(rawValue: "retrievelocationname"), object: nil)
        
         //Call updateData
-        BioManager.shared.reloadData()
+        FSManager.shared.reloadData()
     }
     
     //MARK: - NOTIFICATION LOCATION NAME
     @objc func receiveLocationName(_ notification: NSNotification) {
         
-        updatePositionLabel()
+        //updatePositionLabel()
 
     }
     
     
     //MARK : LOAD
-    func loadCities(){
-        let cities = bioRepository.loadAllSavedCities()
-        if( !cities.isEmpty ){
-            print("getCityList already loaded")
+    func loadFS(){
+        let antennes = fsRepository.loadSavedData()
+        if( !antennes.isEmpty ){
+            print("antennes already loaded")
         } else {
             //Load cities
-            BioService.shared.getCityList(){(success, cities) in
+            FSService.shared.getAntenneList{(success, antennes) in
                 if success {
                     //Success display result
-                    if( !cities.isEmpty ){
-                        print("Call getCityList success \(cities.count) values")
+                    if( !antennes.isEmpty ){
+                        print("Call antennes success \(antennes.count) values")
                     }
                 } else {
                     //Error display alert
-                    print("Call getCityList download failed.")
+                    print("Call antennes load saved data failed.")
                 }
                 
             }
@@ -79,42 +81,10 @@ class FSTabBarViewController: UITabBarController {
     //MARK: - NOTIFICATION LOCATION
     @objc func openInfos(_ sender: Any) {
 
-        performSegue(withIdentifier: "segueToInfos", sender: nil)
+        performSegue(withIdentifier: "segueToCarousel", sender: nil)
         
 
     }
-    
-    func updateSliderValue(){
-        (self.viewControllers?[0] as! BioMapController).slider.value = BioManager.shared.getSliderValue()
-        (self.viewControllers?[1] as! ListViewController).slider?.value = BioManager.shared.getSliderValue()
-        updatePositionLabel()
-    }
-    
-    /*func setSliderValue(newValue: Float){
-        sliderValue = newValue
-        
-        (self.viewControllers?[0] as! BioMapController).slider.value = sliderValue
-        (self.viewControllers?[1] as! ListViewController).slider?.value = sliderValue
-        updatePositionLabel()
-        
-        NotificationCenter.default.post(name: NSNotification.Name(rawValue: "changerange"), object: nil)
-        
-    }*/
-    
-    private func updatePositionLabel(){
-        
-        let sliderTxt = "\(String(format: "%.0f",  BioManager.shared.getSliderValue())) km autour de \(BioManager.shared.getMyPositionText())"
-        (self.viewControllers?[0] as! BioMapController).positionLabel.text = sliderTxt
-        (self.viewControllers?[1] as! ListViewController).positionLabel?.text = sliderTxt
-        
-        //updateMyPositionLabel()
-       
-    }
-    
-    //Update all slider for tab on tabview
-    /*func updateAllSlider(){
-        setSliderValue(newValue: BioManager.shared.getSliderValue())
-    }*/
     
 }
 

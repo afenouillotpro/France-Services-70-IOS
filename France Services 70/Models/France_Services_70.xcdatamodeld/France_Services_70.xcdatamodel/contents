@@ -1,4 +1,91 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="1" systemVersion="11A491" minimumToolsVersion="Automatic" sourceLanguage="Swift" usedWithCloudKit="false" userDefinedModelVersionIdentifier="">
-    <elements/>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="23231" systemVersion="23G93" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Antenne" representedClassName=".Antenne" syncable="YES">
+        <attribute name="adresse" optional="YES" attributeType="String"/>
+        <attribute name="aidant_connect" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="c_acronyme" optional="YES" attributeType="String"/>
+        <attribute name="c_adresse" optional="YES" attributeType="String"/>
+        <attribute name="c_cl" optional="YES" attributeType="String"/>
+        <attribute name="c_lat_cl" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="c_logo" optional="YES" attributeType="String"/>
+        <attribute name="c_lon_cl" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="c_name" optional="YES" attributeType="String"/>
+        <attribute name="c_web" optional="YES" attributeType="String"/>
+        <attribute name="conseiller" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="cp" optional="YES" attributeType="String"/>
+        <attribute name="date_mise_service" optional="YES" attributeType="String"/>
+        <attribute name="email" optional="YES" attributeType="String"/>
+        <attribute name="event" optional="YES" attributeType="String"/>
+        <attribute name="ferm_annuelle" optional="YES" attributeType="String"/>
+        <attribute name="fs_id" optional="YES" attributeType="String"/>
+        <attribute name="lat" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="lon" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="nom" optional="YES" attributeType="String"/>
+        <attribute name="site" optional="YES" attributeType="String"/>
+        <attribute name="site_social" optional="YES" attributeType="String"/>
+        <attribute name="tel" optional="YES" attributeType="String"/>
+        <attribute name="tel2" optional="YES" attributeType="String"/>
+        <attribute name="ville" optional="YES" attributeType="String"/>
+        <relationship name="horaires" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Horaire" inverseName="antennes" inverseEntity="Horaire"/>
+        <relationship name="outils" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Outil" inverseName="outils" inverseEntity="Outil"/>
+        <relationship name="permanences" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Permanence" inverseName="antennes" inverseEntity="Permanence"/>
+        <uniquenessConstraints>
+            <uniquenessConstraint>
+                <constraint value="fs_id"/>
+            </uniquenessConstraint>
+        </uniquenessConstraints>
+    </entity>
+    <entity name="Horaire" representedClassName=".Horaire" syncable="YES">
+        <attribute name="fermetureA" optional="YES" attributeType="String"/>
+        <attribute name="fermetureM" optional="YES" attributeType="String"/>
+        <attribute name="horaires_id" optional="YES" attributeType="String"/>
+        <attribute name="jourid" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="ouvertureA" optional="YES" attributeType="String"/>
+        <attribute name="ouvertureM" optional="YES" attributeType="String"/>
+        <attribute name="rdvA" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="rdvM" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="semaine" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <relationship name="antennes" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Antenne" inverseName="horaires" inverseEntity="Antenne"/>
+        <uniquenessConstraints>
+            <uniquenessConstraint>
+                <constraint value="horaires_id"/>
+            </uniquenessConstraint>
+        </uniquenessConstraints>
+    </entity>
+    <entity name="Outil" representedClassName=".Outil" syncable="YES">
+        <attribute name="nom" optional="YES" attributeType="String"/>
+        <attribute name="outils_id" optional="YES" attributeType="String"/>
+        <relationship name="outils" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Antenne" inverseName="outils" inverseEntity="Antenne"/>
+        <uniquenessConstraints>
+            <uniquenessConstraint>
+                <constraint value="outils_id"/>
+            </uniquenessConstraint>
+        </uniquenessConstraints>
+    </entity>
+    <entity name="Permanence" representedClassName=".Permanence" syncable="YES">
+        <attribute name="com" optional="YES" attributeType="String"/>
+        <attribute name="fermetureA" optional="YES" attributeType="String"/>
+        <attribute name="fermetureM" optional="YES" attributeType="String"/>
+        <attribute name="horaire_com" optional="YES" attributeType="String"/>
+        <attribute name="jourid" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="local" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="mots_id" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="mots_libelle" optional="YES" attributeType="String"/>
+        <attribute name="mots_nom" optional="YES" attributeType="String"/>
+        <attribute name="ouvertureA" optional="YES" attributeType="String"/>
+        <attribute name="ouvertureM" optional="YES" attributeType="String"/>
+        <attribute name="partenaire" optional="YES" attributeType="String"/>
+        <attribute name="partenaire_id" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="permanence_id" optional="YES" attributeType="String"/>
+        <attribute name="permanent" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="rdv" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="recurrence_mens" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="visio" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <relationship name="antennes" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Antenne" inverseName="permanences" inverseEntity="Antenne"/>
+        <uniquenessConstraints>
+            <uniquenessConstraint>
+                <constraint value="permanence_id"/>
+            </uniquenessConstraint>
+        </uniquenessConstraints>
+    </entity>
 </model>
