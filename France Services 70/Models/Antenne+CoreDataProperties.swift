@@ -39,34 +39,13 @@ extension Antenne {
     @NSManaged public var event: String?
     @NSManaged public var lat: NSNumber?
     @NSManaged public var lon: NSNumber?
-    @NSManaged public var aidant_connect: NSNumber?
-    @NSManaged public var conseiller: NSNumber?
-    
+    @NSManaged public var aidant_connect: Bool
+    @NSManaged public var conseiller: Bool
     @NSManaged public var horaires: NSSet?
     @NSManaged public var permanences: NSSet?
     @NSManaged public var outils: NSSet?
+    @NSManaged public var comcom_id: Int16
     
-    var isAidantConnect: Bool {
-        get {
-            return Bool(truncating: aidant_connect!)
-        }
-        set {
-            aidant_connect = NSNumber(value: newValue)
-        }
-    }
-    
-    var isConseiller: Bool {
-        get {
-            return Bool(truncating: conseiller!)
-        }
-        set {
-            conseiller = NSNumber(value: newValue)
-        }
-    }
-    
-
-    //@NSManaged @objc(conseiller) var conseiller: Bool
-   // @NSManaged @objc(aidant_connect) var aidant_connect: Bool
     
 
 }

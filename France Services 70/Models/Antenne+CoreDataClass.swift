@@ -81,7 +81,9 @@ public class Antenne: NSManagedObject, Codable {
                 c_logo = try values.decode(String.self, forKey: .c_logo)
                 c_web = try values.decode(String.self, forKey: .c_web)
                 
-                //conseiller = try values.decode(Bool.self, forKey: .conseiller)
+            
+                conseiller = try values.decode(Bool.self, forKey: .conseiller)
+                aidant_connect = try values.decode(Bool.self, forKey: .aidant_connect)
                 
                 cp = try values.decode(String.self, forKey: .cp)
                 date_mise_service = try values.decode(String.self, forKey: .date_mise_service)
@@ -98,16 +100,12 @@ public class Antenne: NSManagedObject, Codable {
                 site_social = try values.decode(String.self, forKey: .site_social)
                 ferm_annuelle = try values.decode(String.self, forKey: .ferm_annuelle)
             
-                /*if let lonStr = try? values.decode(Bool.self, forKey: .aidant_connect){
-                    aidant_connect = NSNumber(value:lonStr)
-                }
-                if let lonStr = try? values.decode(Double.self, forKey: .conseiller){
-                    conseiller = NSNumber(value:lonStr)
-                }*/
+            
+                comcom_id = try Int16(values.decode(Int.self, forKey: .comcom_id))
             
                 horaires = NSSet(array: try values.decode([Horaire].self, forKey: .horaires))
                 permanences = NSSet(array: try values.decode([Permanence].self, forKey: .permanence))
-            outils = NSSet(array: try values.decode([Outil].self, forKey: .outils))
+                outils = NSSet(array: try values.decode([Outil].self, forKey: .outils))
                     
             } catch {
                 print ("error antenne init")
@@ -143,5 +141,6 @@ public class Antenne: NSManagedObject, Codable {
         case horaires = "horaires"
         case permanence = "permanence"
         case outils = "outils"
+        case comcom_id = "comcom_id"
     }
 }

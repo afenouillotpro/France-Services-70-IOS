@@ -11,6 +11,7 @@
         <attribute name="c_lon_cl" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
         <attribute name="c_name" optional="YES" attributeType="String"/>
         <attribute name="c_web" optional="YES" attributeType="String"/>
+        <attribute name="comcom_id" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="conseiller" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
         <attribute name="cp" optional="YES" attributeType="String"/>
         <attribute name="date_mise_service" optional="YES" attributeType="String"/>

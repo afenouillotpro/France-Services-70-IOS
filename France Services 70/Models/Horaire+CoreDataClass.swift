@@ -37,6 +37,12 @@ public class Horaire: NSManagedObject, Codable {
             fermetureA = try values.decode(String.self, forKey: .fermetureA)
             ouvertureM = try values.decode(String.self, forKey: .ouvertureM)
             fermetureM = try values.decode(String.self, forKey: .fermetureM)
+            
+            
+            jourid = try Int16(values.decode(Int.self, forKey: .jourid))
+            semaine = try Int16(values.decode(Int.self, forKey: .semaine))
+            rdvA = try values.decode(Bool.self, forKey: .rdvA)
+            rdvM = try values.decode(Bool.self, forKey: .rdvM)
             /*lastname = try values.decode(String.self, forKey: .lastname)
             userid = try values.decode(String.self, forKey: .userid)
             latitude = try values.decode(String.self, forKey: .latitude)

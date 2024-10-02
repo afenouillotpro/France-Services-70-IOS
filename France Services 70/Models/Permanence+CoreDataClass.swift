@@ -43,22 +43,17 @@ public class Permanence: NSManagedObject, Codable {
             partenaire = try values.decode(String.self, forKey: .partenaire)
             mots_nom = try values.decode(String.self, forKey: .mots_nom)
             mots_libelle = try values.decode(String.self, forKey: .mots_libelle)
-
-        //case jourid = "jourid"
-        //case partenaire_id = "partenaire_id"
-        //case recurrence_mens = "recurrence_mens"
-        //case rdv = "rdv"
-        //case visio = "visio"
-        //case permanent = "permanent"
-        //case local = "local"
-        //case mots_id = "mots_id"
-
-            /*lastname = try values.decode(String.self, forKey: .lastname)
-            userid = try values.decode(String.self, forKey: .userid)
-            latitude = try values.decode(String.self, forKey: .latitude)
-            longitude = try values.decode(String.self, forKey: .longitude)*/
             
-            //uniqueid = try values.decode(GitCommit.self, forKey: .uniqueid)
+            jourid = try Int16(values.decode(Int.self, forKey: .jourid))
+            partenaire_id = try Int16(values.decode(Int.self, forKey: .partenaire_id))
+            recurrence_mens = try Int16(values.decode(Int.self, forKey: .recurrence_mens))
+            mots_id = try Int16(values.decode(Int.self, forKey: .mots_id))
+
+            rdv = try values.decode(Bool.self, forKey: .rdv)
+            visio = try values.decode(Bool.self, forKey: .visio)
+            permanent = try values.decode(Bool.self, forKey: .permanent)
+            local = try values.decode(Bool.self, forKey: .local)
+            
         } catch {
             print ("error permanence init \(permanence_id)")
         }

@@ -55,6 +55,7 @@ class FSDetailViewController: UIViewController {
     @IBOutlet weak var cityTextF: UITextField!
     @IBOutlet weak var cpTextF: UITextField!
     
+    @IBOutlet weak var services: UITextView!
     
     var horaires: [Horaire] = []
     var permanences: [Permanence] = []
@@ -185,9 +186,18 @@ class FSDetailViewController: UIViewController {
         if( horaires.count > 0 ){
             print( horaires[0].ouvertureA )
         }
+        
         if( permanences.count > 0 ){
-            print( permanences[0].partenaire )
+            var text = "Services proposés : \n"
+            for perm in permanences{
+                text += "\n\(perm.partenaire ?? ""), le \(FSHelpers.shared.getDayFromIndew(dayIndex: perm.jourid))  \(FSHelpers.shared.getRdvText(rdv: perm.rdv))"
+            }
+            
+            services.text = text
+        } else {
+            services.removeFromSuperview()
         }
+        
         if( outils.count > 0 ){
             print( outils[0].nom )
         }

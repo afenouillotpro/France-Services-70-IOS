@@ -37,4 +37,41 @@ class FSHelpers{
         
     }
     
+    
+    func getDayFromIndew(dayIndex: Int16)->String {
+        
+        switch dayIndex{
+        case 1:
+            return "lundi"
+        case 2:
+            return "mardi"
+        case 3:
+            return "mercredi"
+        case 4:
+            return "jeudi"
+        case 5:
+            return "vendredi"
+        case 6:
+            return "samedi"
+        case 7:
+            return "dimanche"
+        case 8:
+            return "permanent"
+        default:
+            return ""
+        }
+        
+    }
+    
+    func getRdvText(rdv: Bool)->String {
+        
+        if(rdv){
+            return "sur rendez-vous"
+        } else {
+            return ""
+        }
+        
+    }
+    
+    
 }
