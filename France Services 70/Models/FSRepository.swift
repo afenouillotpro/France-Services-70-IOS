@@ -122,6 +122,10 @@ final class FSRepository {
             do {
                 // fetch is performed on the NSManagedObjectContext
                 let data = try CoreDataStack.sharedInstance.viewContext.fetch(request)
+                
+                for ant in data{
+                    print("LOADED \(ant.nom) horaires count: \(ant.horaires?.count)")
+                }
                 print("Got \(data.count) antennes")
                 return data
             } catch {

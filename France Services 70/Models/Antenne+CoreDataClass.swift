@@ -51,7 +51,7 @@ public class Antenne: NSManagedObject, Codable {
              
              }*/
             
-            if let fsIdStr = try? values.decode(UInt16.self, forKey: .fs_id){
+            if let fsIdStr = try? values.decode(Int.self, forKey: .fs_id){
                 fs_id = String(fsIdStr)
             }
             
@@ -103,7 +103,10 @@ public class Antenne: NSManagedObject, Codable {
             
                 comcom_id = try Int16(values.decode(Int.self, forKey: .comcom_id))
             
+                let horTemp = try values.decode([Horaire].self, forKey: .horaires)
                 horaires = NSSet(array: try values.decode([Horaire].self, forKey: .horaires))
+                print("PARSE \(nom ?? "") horaires count : \(horTemp.count)")
+            
                 permanences = NSSet(array: try values.decode([Permanence].self, forKey: .permanence))
                 outils = NSSet(array: try values.decode([Outil].self, forKey: .outils))
                     

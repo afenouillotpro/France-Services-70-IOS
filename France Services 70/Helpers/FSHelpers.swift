@@ -73,5 +73,22 @@ class FSHelpers{
         
     }
     
+    func getStringFromHoraire(horaire: Horaire)->String {
+        
+        var result = ""
+        
+        result += "\n\(FSHelpers.shared.getDayFromIndew(dayIndex: horaire.jourid))"
+        if( !((horaire.ouvertureM ?? "").isEmpty) && !((horaire.fermetureM ?? "").isEmpty) ){
+            result += " \(horaire.ouvertureM!) \(horaire.fermetureM!)"
+        }
+        
+        if( !((horaire.ouvertureA ?? "").isEmpty) && !((horaire.fermetureA ?? "").isEmpty) ){
+            result += " \(horaire.ouvertureA!) \(horaire.fermetureA!)"
+        }
+        
+        return result
+        
+    }
+    
     
 }

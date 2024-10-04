@@ -55,7 +55,13 @@ class FSDetailViewController: UIViewController {
     @IBOutlet weak var cityTextF: UITextField!
     @IBOutlet weak var cpTextF: UITextField!
     
-    @IBOutlet weak var services: UITextView!
+    
+    @IBOutlet weak var servicesTextF: UITextView!
+    
+    @IBOutlet weak var outilsTextF: UITextView!
+    
+    @IBOutlet weak var horairesTextF: UITextView!
+    
     
     var horaires: [Horaire] = []
     var permanences: [Permanence] = []
@@ -183,23 +189,37 @@ class FSDetailViewController: UIViewController {
         permanences = antenne.permanences?.allObjects as! [Permanence]
         outils = antenne.outils?.allObjects as! [Outil]
         
-        if( horaires.count > 0 ){
-            print( horaires[0].ouvertureA )
-        }
-        
         if( permanences.count > 0 ){
             var text = "Services proposés : \n"
             for perm in permanences{
-                text += "\n\(perm.partenaire ?? ""), le \(FSHelpers.shared.getDayFromIndew(dayIndex: perm.jourid))  \(FSHelpers.shared.getRdvText(rdv: perm.rdv))"
+                text += "\n\(perm.partenaire ?? ""), le \(FSHelpers.shared.getDayFromIndew(dayIndex: perm.jourid)) \(FSHelpers.shared.getRdvText(rdv: perm.rdv))"
             }
             
-            services.text = text
+            servicesTextF.text = text
         } else {
-            services.removeFromSuperview()
+            servicesTextF.removeFromSuperview()
         }
         
         if( outils.count > 0 ){
-            print( outils[0].nom )
+            var text = "Outils disponibles : \n"
+            for out in outils{
+                text += "\n\(out.nom ?? "")"
+            }
+            
+            outilsTextF.text = text
+        } else {
+            outilsTextF.removeFromSuperview()
+        }
+        
+        if( horaires.count > 0 ){
+            var text = "Horaires d'ouverture : \n"
+            for hor in horaires{
+                text += "\n\(FSHelpers.shared.getStringFromHoraire(horaire: hor)) "
+            }
+            
+            horairesTextF.text = text
+        } else {
+            horairesTextF.removeFromSuperview()
         }
         
         /*if antenne.isConseiller{

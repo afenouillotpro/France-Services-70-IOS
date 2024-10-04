@@ -93,11 +93,11 @@ class FSService{
                     //print(str)
                     
                     let _ = try decoder.decode([Antenne].self, from: data)
-                    //let _ = try decoder.decode([Antenne].self, from: data)
                     
                     // Move back on the main thread, as we call tableview.reload
                     //[weak self] in
                     //guard let self = self else {return}
+                    
                     self.fsRepository.saveContext()
                     let result = self.fsRepository.loadSavedData()
                     //Return value must be update

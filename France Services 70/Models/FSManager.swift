@@ -88,8 +88,7 @@ class FSManager: NSObject, CLLocationManagerDelegate{
                 if( !antennes.isEmpty ){
                     print("Call getAntenneList success \(antennes.count) values")
                     self.data = antennes
-                    
-                   
+
                     self.alertViews()
                 }
             } else {

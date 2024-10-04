@@ -33,6 +33,10 @@ public class Permanence: NSManagedObject, Codable {
         self.init(entity: entity, insertInto: managedObjectContext)
         let values = try decoder.container(keyedBy: CodingKeysPe.self)
         do {
+            if let permIdStr = try? values.decode(Int.self, forKey: .permanence_id){
+                permanence_id = String(permIdStr)
+            }
+            
             ouvertureA = try values.decode(String.self, forKey: .ouvertureA)
             fermetureA = try values.decode(String.self, forKey: .fermetureA)
             ouvertureM = try values.decode(String.self, forKey: .ouvertureM)

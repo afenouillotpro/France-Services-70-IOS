@@ -34,6 +34,11 @@ public class Outil: NSManagedObject, Codable {
         self.init(entity: entity, insertInto: managedObjectContext)
         let values = try decoder.container(keyedBy: CodingKeysOu.self)
         do {
+            
+            if let outilIdStr = try? values.decode(Int.self, forKey: .outils_id){
+                outils_id = String(outilIdStr)
+            }
+            
             nom = try values.decode(String.self, forKey: .nom)
             
         } catch {

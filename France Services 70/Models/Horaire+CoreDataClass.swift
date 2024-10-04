@@ -33,6 +33,11 @@ public class Horaire: NSManagedObject, Codable {
         self.init(entity: entity, insertInto: managedObjectContext)
         let values = try decoder.container(keyedBy: CodingKeysHo.self)
         do {
+            
+            if let horaireIdStr = try? values.decode(Int.self, forKey: .horaires_id){
+                horaires_id = String(horaireIdStr)
+            }
+            
             ouvertureA = try values.decode(String.self, forKey: .ouvertureA)
             fermetureA = try values.decode(String.self, forKey: .fermetureA)
             ouvertureM = try values.decode(String.self, forKey: .ouvertureM)

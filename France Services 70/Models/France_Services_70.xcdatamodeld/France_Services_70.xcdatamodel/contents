@@ -46,7 +46,7 @@
         <attribute name="rdvA" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
         <attribute name="rdvM" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
         <attribute name="semaine" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
-        <relationship name="antennes" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Antenne" inverseName="horaires" inverseEntity="Antenne"/>
+        <relationship name="antennes" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Antenne" inverseName="horaires" inverseEntity="Antenne"/>
         <uniquenessConstraints>
             <uniquenessConstraint>
                 <constraint value="horaires_id"/>
@@ -56,7 +56,7 @@
     <entity name="Outil" representedClassName=".Outil" syncable="YES">
         <attribute name="nom" optional="YES" attributeType="String"/>
         <attribute name="outils_id" optional="YES" attributeType="String"/>
-        <relationship name="outils" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Antenne" inverseName="outils" inverseEntity="Antenne"/>
+        <relationship name="outils" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Antenne" inverseName="outils" inverseEntity="Antenne"/>
         <uniquenessConstraints>
             <uniquenessConstraint>
                 <constraint value="outils_id"/>
@@ -82,7 +82,7 @@
         <attribute name="rdv" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
         <attribute name="recurrence_mens" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="visio" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
-        <relationship name="antennes" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Antenne" inverseName="permanences" inverseEntity="Antenne"/>
+        <relationship name="antennes" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Antenne" inverseName="permanences" inverseEntity="Antenne"/>
         <uniquenessConstraints>
             <uniquenessConstraint>
                 <constraint value="permanence_id"/>
